@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "[[OvitoElfcarReader]]"
+version = "[[0.0.1]]"
+description = "[[Custom Ovito reader for ELFCAR files]]"
+keywords = ["ovito", "ovito-extension"]
+authors = [
+    {name = "[[Gael Huynh]]", email = "[[gael.huynh@univ-lyon1.fr]]"},
+]
+maintainers = [
+    {name = "[[Gael Huynh]]", email = "[[gael.huynh@univ-lyon1.fr]]"},
+]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "ovito >= 3.9.1",
+    "pymatgen >= 2024.6.10",
+]
+
+[project.urls]
+repository = "[[Repository Link]]"
+
+[project.entry-points.'OVITO.FileReader']
+"[[Human readable file reader name]]" = "[[PackageName]]:[[FileReaderName]]"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore:module 'sre_parse' is deprecated:DeprecationWarning",
+    "ignore:module 'sre_constants' is deprecated:DeprecationWarning",
+]
