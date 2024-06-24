@@ -3,15 +3,15 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "[[OvitoElfcarReader]]"
-version = "[[0.0.1]]"
-description = "[[Custom Ovito reader for ELFCAR files]]"
+name = "OvitoElfcarReader"
+version = "0.0.1"
+description = "Custom Ovito reader for ELFCAR files"
 keywords = ["ovito", "ovito-extension"]
 authors = [
-    {name = "[[Gael Huynh]]", email = "[[gael.huynh@univ-lyon1.fr]]"},
+    {name = "Gael Huynh", email = "gael.huynh@univ-lyon1.fr"},
 ]
 maintainers = [
-    {name = "[[Gael Huynh]]", email = "[[gael.huynh@univ-lyon1.fr]]"},
+    {name = "Gael Huynh", email = "gael.huynh@univ-lyon1.fr"},
 ]
 license = {text = "MIT License"}
 readme = "README.md"
@@ -22,10 +22,10 @@ dependencies = [
 ]
 
 [project.urls]
-repository = "[[Repository Link]]"
+repository = "https://github.com/akwarii/OvitoElfcarReader"
 
-[project.entry-points.'OVITO.FileReader']
-"[[Human readable file reader name]]" = "[[PackageName]]:[[FileReaderName]]"
+[project.entry-points."OVITO.FileReader"]
+"ELFCAR File" = "OvitoElfcarReader:ElfcarReader"
 
 [tool.setuptools.packages.find]
 where = ["src"]
